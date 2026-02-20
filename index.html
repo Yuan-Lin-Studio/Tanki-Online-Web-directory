@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>ly云手机 | 多功能工具页</title>
+  <title>ly云手机</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
@@ -38,6 +38,15 @@
       width: 100%;
       max-width: 420px;
       margin-top: 10px;
+    }
+
+    .brand-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      text-align: center;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
     }
 
     .notice {
@@ -291,14 +300,15 @@
 </head>
 <body>
   <div class="page-container">
-    <!-- 1. 云手机说明 -->
+    <!-- 1. 远程控制精灵说明 -->
     <div class="section active" id="section1">
       <div class="content">
+        <div class="brand-title">ly云手机</div>
         <div class="func-card">
-          <div class="func-card-title">☁️ 云手机使用指南</div>
+          <div class="func-card-title">🚀 远程控制精灵指南</div>
           <div class="func-card-content">
             <div class="notice">
-              <p>此网页为腾讯文档网页版，用于管理云手机使用状态。</p>
+              <p>此网页为腾讯文档网页版，用于管理远程控制精灵的设备使用状态。</p>
               <div class="wave-underline">
                 <svg viewBox="0 0 100 6" preserveAspectRatio="none">
                   <path fill="none" stroke="var(--color-accent)" stroke-width="1" d="M0,3 Q25,5 50,3 T100,3"/>
@@ -311,18 +321,18 @@
                 </svg>
               </div>
               <ol>
-                <li>复制 ToDesk 伙伴识别码及验证码</li>
-                <li>在 ToDesk 客户端中远程打开设备</li>
+                <li>在设备屏幕上找到远程控制精灵的二维码</li>
+                <li>使用客户端扫描二维码，将其添加到远程列表</li>
                 <li>在腾讯文档中更新为“正在使用”状态</li>
               </ol>
             </div>
-            <a class="button-link" href="https://docs.qq.com/sheet/DYUNMc2ZUbkJac29z?tab=BB08J2" target="_blank">查看 / 更新云手机状态</a>
+            <a class="button-link" href="https://docs.qq.com/sheet/DYUNMc2ZUbkJac29z?tab=BB08J2" target="_blank">查看 / 更新设备状态</a>
             <div class="wave-underline">
               <svg viewBox="0 0 100 6" preserveAspectRatio="none">
                 <path fill="none" stroke="var(--color-accent)" stroke-width="1" d="M0,3 Q25,5 50,3 T100,3"/>
               </svg>
             </div>
-            <a class="button-link" href="https://www.todesk.com/download.html" target="_blank">下载 ToDesk</a>
+            <a class="button-link" href="https://www.yijieapp.com/" target="_blank">下载远程控制精灵</a>
           </div>
         </div>
       </div>
@@ -351,7 +361,7 @@
                   <a class="metal-btn" href="https://weixin.qq.com/" target="_blank">微</a>
                   <a class="metal-btn" href="https://im.qq.com/" target="_blank">Q</a>
                   <a class="metal-btn" href="https://browser.360.cn/se/" target="_blank">360</a>
-                  <a class="metal-btn" href="https://www.todesk.com/download.html" target="_blank">向</a>
+                  <a class="metal-btn" href="https://www.yijieapp.com/" target="_blank">精</a>
                 </div>
               </div>
               <div class="nav-group">
@@ -505,8 +515,8 @@
     <!-- 6. FAQ 帮助页面 -->
     <div class="section" id="section6">
       <div class="content legal-content">
-        <h3>1. 如何连接云手机？</h3>
-        <p>首先，请在“云手机说明”页面复制 ToDesk 的伙伴识别码和验证码。然后，在您的电脑或手机上安装并打开 ToDesk 客户端，输入识别码和验证码即可发起远程连接。</p>
+        <h3>1. 如何使用远程控制精灵？</h3>
+        <p>首先，请在目标设备的屏幕上找到远程控制精灵的二维码。然后，在您的电脑或手机上打开远程控制精灵客户端，扫描该二维码将其添加到远程列表。添加成功后，即可发起远程连接。</p>
         
         <h3>2. 计算器功能支持哪些运算？</h3>
         <p>基础计算器支持加、减、乘、除四则运算。在“扩展功能区”的科学计算器中，您可以执行更复杂的数学运算，如三角函数 (sin, cos)、对数 (log) 和指数等。</p>
@@ -534,7 +544,7 @@
         <p>为了提供“工作清单”和“笔记”的持久化功能，我们使用浏览器的 LocalStorage 技术。这些数据完全由您自己控制，您可以随时清除浏览器数据来删除它们。</p>
         
         <h3>3. 第三方链接</h3>
-        <p>本网页包含指向第三方网站（如 Microsoft, ToDesk, Bilibili 等）的链接。这些网站有其独立的隐私政策，我们不对它们的内容或数据处理方式负责。点击这些链接后，您将离开本网站。</p>
+        <p>本网页包含指向第三方网站（如 Microsoft, 远程控制精灵官网, Bilibili 等）的链接。这些网站有其独立的隐私政策，我们不对它们的内容或数据处理方式负责。点击这些链接后，您将离开本网站。</p>
         
         <h3>4. Cookie 的使用</h3>
         <p>本网站可能使用必要的 Cookie 来维护您的会话状态和页面导航功能。我们不使用 Cookie 进行广告跟踪或分析。</p>
