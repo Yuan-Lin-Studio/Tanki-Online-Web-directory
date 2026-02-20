@@ -34,9 +34,6 @@
     }
     .section.active { opacity: 1; visibility: visible; }
     
-    /* 修改点：完全移除了 .title-bar 相关的所有CSS样式 */
-    /* 所有特效（波浪线、按钮等）均被保留 */
-
     .content {
       width: 100%;
       max-width: 420px;
@@ -296,80 +293,82 @@
   <div class="page-container">
     <!-- 1. 云手机说明 -->
     <div class="section active" id="section1">
-      <!-- 修改点：移除了顶部的 title-bar，但保留了所有内容特效 -->
       <div class="content">
-        <div class="notice">
-          <p>此网页为腾讯文档网页版，用于管理云手机使用状态。</p>
-          <div class="wave-underline">
-            <svg viewBox="0 0 100 6" preserveAspectRatio="none">
-              <path fill="none" stroke="var(--color-accent)" stroke-width="1" d="M0,3 Q25,5 50,3 T100,3"/>
-            </svg>
+        <div class="func-card">
+          <div class="func-card-title">☁️ 云手机使用指南</div>
+          <div class="func-card-content">
+            <div class="notice">
+              <p>此网页为腾讯文档网页版，用于管理云手机使用状态。</p>
+              <div class="wave-underline">
+                <svg viewBox="0 0 100 6" preserveAspectRatio="none">
+                  <path fill="none" stroke="var(--color-accent)" stroke-width="1" d="M0,3 Q25,5 50,3 T100,3"/>
+                </svg>
+              </div>
+              <p>操作说明：</p>
+              <div class="wave-underline">
+                <svg viewBox="0 0 100 6" preserveAspectRatio="none">
+                  <path fill="none" stroke="var(--color-accent)" stroke-width="1" d="M0,3 Q25,1 50,3 T100,3"/>
+                </svg>
+              </div>
+              <ol>
+                <li>复制 ToDesk 伙伴识别码及验证码</li>
+                <li>在 ToDesk 客户端中远程打开设备</li>
+                <li>在腾讯文档中更新为“正在使用”状态</li>
+              </ol>
+            </div>
+            <a class="button-link" href="https://docs.qq.com/sheet/DYUNMc2ZUbkJac29z?tab=BB08J2" target="_blank">查看 / 更新云手机状态</a>
+            <div class="wave-underline">
+              <svg viewBox="0 0 100 6" preserveAspectRatio="none">
+                <path fill="none" stroke="var(--color-accent)" stroke-width="1" d="M0,3 Q25,5 50,3 T100,3"/>
+              </svg>
+            </div>
+            <a class="button-link" href="https://www.todesk.com/download.html" target="_blank">下载 ToDesk</a>
           </div>
-          <p>操作说明：</p>
-          <div class="wave-underline">
-            <svg viewBox="0 0 100 6" preserveAspectRatio="none">
-              <path fill="none" stroke="var(--color-accent)" stroke-width="1" d="M0,3 Q25,1 50,3 T100,3"/>
-            </svg>
-          </div>
-          <ol>
-            <li>复制 ToDesk 伙伴识别码及验证码</li>
-            <li>在 ToDesk 客户端中远程打开设备</li>
-            <li>在腾讯文档中更新为“正在使用”状态</li>
-          </ol>
         </div>
-        <a class="button-link" href="https://docs.qq.com/sheet/DYUNMc2ZUbkJac29z?tab=BB08J2" target="_blank">查看 / 更新云手机状态</a>
-        <div class="wave-underline">
-          <svg viewBox="0 0 100 6" preserveAspectRatio="none">
-            <path fill="none" stroke="var(--color-accent)" stroke-width="1" d="M0,3 Q25,5 50,3 T100,3"/>
-          </svg>
-        </div>
-        <a class="button-link" href="https://www.todesk.com/download.html" target="_blank">下载 ToDesk</a>
       </div>
     </div>
 
     <!-- 2. 网址导航 + 计算器 -->
     <div class="section" id="section2">
-      <!-- 修改点：移除了顶部的 title-bar，但保留了所有内容特效 -->
       <div class="content">
-        <h2 class="half-title" style="font-weight:400;letter-spacing:1px;margin-bottom:12px;">网址导航</h2>
-        <div class="wave-underline">
-          <svg viewBox="0 0 100 6" preserveAspectRatio="none">
-            <path fill="none" stroke="var(--color-accent)" stroke-width="1" d="M0,3 Q25,5 50,3 T100,3"/>
-          </svg>
-        </div>
-        <div class="compact-nav">
-          <div class="nav-group">
-            <div class="nav-label">微软服务</div>
-            <div class="nav-buttons">
-              <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows11" target="_blank">11</a>
-              <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank">10</a>
-              <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows8ISO" target="_blank">8.1</a>
-              <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows8" target="_blank">8</a>
-              <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows7" target="_blank">7</a>
-            </div>
-          </div>
-          <div class="nav-group">
-            <div class="nav-label">装机必备</div>
-            <div class="nav-buttons">
-              <a class="metal-btn" href="https://weixin.qq.com/" target="_blank">微</a>
-              <a class="metal-btn" href="https://im.qq.com/" target="_blank">Q</a>
-              <a class="metal-btn" href="https://browser.360.cn/se/" target="_blank">360</a>
-              <a class="metal-btn" href="https://www.todesk.com/download.html" target="_blank">向</a>
-            </div>
-          </div>
-          <div class="nav-group">
-            <div class="nav-label">装机专用</div>
-            <div class="nav-buttons">
-              <a class="metal-btn" href="https://rufus.ie/zh/" target="_blank">Ruf</a>
-              <a class="metal-btn" href="https://www.diskgenius.cn/" target="_blank">DG</a>
-              <a class="metal-btn" href="https://www.winntsetup.com/" target="_blank">WNT</a>
-            </div>
-          </div>
-          <div class="nav-group">
-            <div class="nav-label">搜索视频</div>
-            <div class="nav-buttons">
-              <a class="metal-btn" href="https://www.baidu.com" target="_blank">百</a>
-              <a class="metal-btn" href="https://www.bilibili.com" target="_blank">B站</a>
+        <div class="func-card">
+          <div class="func-card-title">🌐 常用网址导航</div>
+          <div class="func-card-content">
+            <div class="compact-nav">
+              <div class="nav-group">
+                <div class="nav-label">微软服务</div>
+                <div class="nav-buttons">
+                  <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows11" target="_blank">11</a>
+                  <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank">10</a>
+                  <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows8ISO" target="_blank">8.1</a>
+                  <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows8" target="_blank">8</a>
+                  <a class="metal-btn" href="https://www.microsoft.com/zh-cn/software-download/windows7" target="_blank">7</a>
+                </div>
+              </div>
+              <div class="nav-group">
+                <div class="nav-label">装机必备</div>
+                <div class="nav-buttons">
+                  <a class="metal-btn" href="https://weixin.qq.com/" target="_blank">微</a>
+                  <a class="metal-btn" href="https://im.qq.com/" target="_blank">Q</a>
+                  <a class="metal-btn" href="https://browser.360.cn/se/" target="_blank">360</a>
+                  <a class="metal-btn" href="https://www.todesk.com/download.html" target="_blank">向</a>
+                </div>
+              </div>
+              <div class="nav-group">
+                <div class="nav-label">装机专用</div>
+                <div class="nav-buttons">
+                  <a class="metal-btn" href="https://rufus.ie/zh/" target="_blank">Ruf</a>
+                  <a class="metal-btn" href="https://www.diskgenius.cn/" target="_blank">DG</a>
+                  <a class="metal-btn" href="https://www.winntsetup.com/" target="_blank">WNT</a>
+                </div>
+              </div>
+              <div class="nav-group">
+                <div class="nav-label">搜索视频</div>
+                <div class="nav-buttons">
+                  <a class="metal-btn" href="https://www.baidu.com" target="_blank">百</a>
+                  <a class="metal-btn" href="https://www.bilibili.com" target="_blank">B站</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -379,7 +378,7 @@
           </svg>
         </div>
         <div class="func-card">
-          <div class="func-card-title">🧮 计算器</div>
+          <div class="func-card-title">🧮 简易计算器</div>
           <div class="func-card-content">
             <div class="calc">
               <input type="number" id="num1" placeholder="数字1">
@@ -399,10 +398,9 @@
 
     <!-- 3. 时钟 + 天气 + 工作清单 -->
     <div class="section" id="section3">
-      <!-- 修改点：移除了顶部的 title-bar，但保留了所有内容特效 -->
       <div class="content">
         <div class="func-card">
-          <div class="func-card-title">🕒 时钟 & 🌤️ 天气</div>
+          <div class="func-card-title">🕒 实时时钟与天气</div>
           <div class="func-card-content clock-weather">
             <div>
               <span class="small-title">时间</span>
@@ -415,7 +413,7 @@
           </div>
         </div>
         <div class="func-card">
-          <div class="func-card-title">📝 工作清单</div>
+          <div class="func-card-title">📝 工作待办清单</div>
           <div class="func-card-content">
             <div class="schedule-inputs" id="scheduleInputs">
               <input type="datetime-local" class="schedule-time-input">
@@ -432,10 +430,9 @@
 
     <!-- 4. 倒计时 + 笔记 + 预留 -->
     <div class="section" id="section4">
-      <!-- 修改点：移除了顶部的 title-bar，但保留了所有内容特效 -->
       <div class="content">
         <div class="func-card">
-          <div class="func-card-title">⏳ 倒计时</div>
+          <div class="func-card-title">⏳ 目标日期倒计时</div>
           <div class="func-card-content">
             <div class="countdown-input">
               <input type="date" id="targetDate">
@@ -444,7 +441,7 @@
           </div>
         </div>
         <div class="func-card">
-          <div class="func-card-title">📒 笔记</div>
+          <div class="func-card-title">📒 快速记事本</div>
           <div class="func-card-content">
             <textarea class="note-input" id="noteInput" placeholder="写点什么..."></textarea>
             <button class="note-save" onclick="saveNote()">保存</button>
@@ -452,7 +449,7 @@
           </div>
         </div>
         <div class="func-card">
-          <div class="func-card-title">🔲 预留</div>
+          <div class="func-card-title">🔲 预留功能区</div>
           <div class="func-card-content reserved-widget">未来扩展</div>
         </div>
       </div>
@@ -460,41 +457,45 @@
 
     <!-- 5. 扩展功能区 -->
     <div class="section" id="section5">
-      <!-- 修改点：移除了顶部的 title-bar，但保留了所有内容特效 -->
       <div class="content">
-        <div class="extended-grid" id="extendedGrid5">
-          <div class="ext-feature" data-tool="scientific-calc">
-            <h4>🔬 科学计算器</h4>
-            <p>支持三角函数、对数、指数等运算</p>
-            <div class="tool-area" id="sciCalcArea">
-              <input type="text" id="sciExpr" placeholder="例: sin(30)+log(100)" style="width:100%;padding:6px;margin-bottom:6px;">
-              <button onclick="runSciCalc()" style="width:100%;padding:6px;">计算</button>
-              <div id="sciResult" style="margin-top:6px;text-align:center;"></div>
-            </div>
-          </div>
-          <div class="ext-feature" data-tool="eyedropper">
-            <h4>🎨 颜色拾取器</h4>
-            <p>屏幕取色与调色板管理</p>
-            <div class="tool-area" id="eyedropperArea">
-              <button onclick="startPickColor()" style="width:100%;padding:6px;">取色</button>
-              <div id="pickedColor" style="margin-top:6px;text-align:center;"></div>
-            </div>
-          </div>
-          <div class="ext-feature" data-tool="tech-tools">
-            <h4>🛠 技术工具集</h4>
-            <p>IP查询、Base64编解码、JSON格式化</p>
-            <div class="tool-area" id="techToolsArea">
-              <button onclick="showTechToolMenu()" style="width:100%;padding:6px;">打开工具菜单</button>
-              <div id="techToolOutput" style="margin-top:6px;font-size:0.78rem;"></div>
-            </div>
-          </div>
-          <div class="ext-feature" data-tool="camera-test">
-            <h4>📷 相机测试模式</h4>
-            <p>检测摄像头分辨率与帧率</p>
-            <div class="tool-area" id="cameraArea">
-              <button onclick="startCameraTest()" style="width:100%;padding:6px;">打开摄像头</button>
-              <video id="camVideo" autoplay playsinline muted style="width:100%;margin-top:6px;display:none;"></video>
-              <div id="camInfo" style="margin-top:6px;text-align:center;font-size:0.78rem;"></div>
+        <div class="func-card">
+          <div class="func-card-title">🛠️ 扩展工具箱</div>
+          <div class="func-card-content">
+            <div class="extended-grid" id="extendedGrid5">
+              <div class="ext-feature" data-tool="scientific-calc">
+                <h4>🔬 科学计算器</h4>
+                <p>支持三角函数、对数、指数等运算</p>
+                <div class="tool-area" id="sciCalcArea">
+                  <input type="text" id="sciExpr" placeholder="例: sin(30)+log(100)" style="width:100%;padding:6px;margin-bottom:6px;">
+                  <button onclick="runSciCalc()" style="width:100%;padding:6px;">计算</button>
+                  <div id="sciResult" style="margin-top:6px;text-align:center;"></div>
+                </div>
+              </div>
+              <div class="ext-feature" data-tool="eyedropper">
+                <h4>🎨 颜色拾取器</h4>
+                <p>屏幕取色与调色板管理</p>
+                <div class="tool-area" id="eyedropperArea">
+                  <button onclick="startPickColor()" style="width:100%;padding:6px;">取色</button>
+                  <div id="pickedColor" style="margin-top:6px;text-align:center;"></div>
+                </div>
+              </div>
+              <div class="ext-feature" data-tool="tech-tools">
+                <h4>🛠 技术工具集</h4>
+                <p>IP查询、Base64编解码、JSON格式化</p>
+                <div class="tool-area" id="techToolsArea">
+                  <button onclick="showTechToolMenu()" style="width:100%;padding:6px;">打开工具菜单</button>
+                  <div id="techToolOutput" style="margin-top:6px;font-size:0.78rem;"></div>
+                </div>
+              </div>
+              <div class="ext-feature" data-tool="camera-test">
+                <h4>📷 相机测试模式</h4>
+                <p>检测摄像头分辨率与帧率</p>
+                <div class="tool-area" id="cameraArea">
+                  <button onclick="startCameraTest()" style="width:100%;padding:6px;">打开摄像头</button>
+                  <video id="camVideo" autoplay playsinline muted style="width:100%;margin-top:6px;display:none;"></video>
+                  <div id="camInfo" style="margin-top:6px;text-align:center;font-size:0.78rem;"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -503,7 +504,6 @@
 
     <!-- 6. FAQ 帮助页面 -->
     <div class="section" id="section6">
-      <!-- 修改点：移除了顶部的 title-bar，但保留了所有内容特效 -->
       <div class="content legal-content">
         <h3>1. 如何连接云手机？</h3>
         <p>首先，请在“云手机说明”页面复制 ToDesk 的伙伴识别码和验证码。然后，在您的电脑或手机上安装并打开 ToDesk 客户端，输入识别码和验证码即可发起远程连接。</p>
@@ -526,7 +526,6 @@
 
     <!-- 7. 隐私政策页面 -->
     <div class="section" id="section7">
-      <!-- 修改点：移除了顶部的 title-bar，但保留了所有内容特效 -->
       <div class="content legal-content">
         <h3>1. 我们收集的信息</h3>
         <p>本网页旨在提供便捷的工具服务。我们不会主动收集任何个人身份信息。您在“工作清单”和“笔记”中保存的内容，仅存储在您的本地浏览器中，不会被上传至任何服务器。</p>
