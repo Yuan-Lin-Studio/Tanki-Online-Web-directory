@@ -127,17 +127,17 @@
     
     <script>
         // 卡片悬停效果
-        document.querySelectorAll('.link-card').forEach(card => {
-            card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-10px)');
-            card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0)');
-        });
+        // document.querySelectorAll('.link-card').forEach(card => {
+        //     card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-10px)');
+        //     card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0)');
+        // });
 
         // 随机阴影效果
-        setInterval(() => {
-            document.querySelectorAll('.link-card').forEach(card => {
-                card.style.boxShadow = `0 15px 35px hsla(${Math.random() * 360}, 100%, 50%, 0.15)`;
-            });
-        }, 5000);
+        // setInterval(() => {
+        //     document.querySelectorAll('.link-card').forEach(card => {
+        //         card.style.boxShadow = `0 15px 35px hsla(${Math.random() * 360}, 100%, 50%, 0.15)`;
+        //     });
+        // }, 5000);
 
         // 访问统计（CountAPI + localStorage 降级）
         document.addEventListener('DOMContentLoaded', function() {
