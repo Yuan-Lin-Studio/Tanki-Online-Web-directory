@@ -6,8 +6,9 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2576884527497195"
      crossorigin="anonymous"></script>
     <title>3D坦克网址导航</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 第一个网站的样式 */
+        /* 基础样式 */
         * {
             margin: 0;
             padding: 0;
@@ -18,152 +19,153 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 20px;
         }
 
+        /* 头部样式 */
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .title {
-            font-size: 3em;
-            font-weight: bold;
-            color: #776e65;
-        }
-
-        .scores {
-            display: flex;
-            gap: 10px;
-        }
-
-        .score-box {
-            background: #bbada0;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
             text-align: center;
-            min-width: 80px;
+            margin-bottom: 30px;
+            padding: 20px;
         }
 
-        .score-box .label {
-            font-size: 0.7em;
-            text-transform: uppercase;
-            opacity: 0.8;
+        .header h1 {
+            font-size: 2.5em;
+            color: #776e65;
+            margin-bottom: 10px;
         }
 
-        .score-box .value {
-            font-size: 1.5em;
-            font-weight: bold;
+        .header p {
+            font-size: 1.1em;
+            color: #8f7a66;
         }
 
-        .controls {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            background: #8f7a66;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-
-        .btn:hover {
-            background: #9f8b77;
-            transform: scale(1.05);
-        }
-
+        /* 网格容器 - 修复的关键部分 */
         .grid-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
+        /* 卡片样式 */
         .link-card {
             background: #faf8ef;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            width: calc(25% - 40px);
+            border-radius: 12px;
+            padding: 25px 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.2s;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+            border: 1px solid rgba(143, 122, 102, 0.1);
         }
 
         .link-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: rgba(143, 122, 102, 0.3);
         }
 
         .link-card h3 {
             font-size: 1.5em;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #776e65;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
 
         .link-card .desc {
-            font-size: 1em;
+            font-size: 0.95em;
             color: #776e65;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            flex-grow: 1;
         }
 
         .link-card .url {
-            font-size: 1em;
+            font-size: 0.9em;
             color: #8f7a66;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            word-break: break-all;
         }
 
         .link-card .url a {
             color: #8f7a66;
             text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
         .link-card .url a:hover {
+            color: #6d5c4b;
             text-decoration: underline;
         }
 
         .link-card .tag {
             display: inline-block;
-            padding: 5px 10px;
+            padding: 5px 12px;
             background: #bbada0;
             color: white;
-            border-radius: 5px;
+            border-radius: 20px;
             font-size: 0.8em;
-            margin-top: 5px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
+        /* 页脚样式 */
         .footer {
-            margin-top: 40px;
+            margin-top: 50px;
             text-align: center;
             font-size: 0.9em;
             color: #776e65;
+            padding: 20px;
+        }
+
+        .footer p {
+            margin-bottom: 15px;
         }
 
         .footer a {
             color: #8f7a66;
             text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: rgba(250, 248, 239, 0.7);
+            border-radius: 20px;
+            transition: all 0.3s;
         }
 
         .footer a:hover {
-            text-decoration: underline;
+            background: rgba(250, 248, 239, 1);
+            transform: translateY(-2px);
         }
 
+        /* 访问计数器 */
         .visit-counter {
-            margin-top: 20px;
+            margin-top: 30px;
             text-align: center;
-            font-size: 1em;
+            font-size: 0.95em;
             color: #776e65;
+            padding: 15px;
+            background: rgba(250, 248, 239, 0.5);
+            border-radius: 10px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .visit-counter i {
@@ -171,91 +173,38 @@
             color: #8f7a66;
         }
 
-        /* 现有的样式保持不变 */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            justify-content: center;
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+                padding: 0 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .link-card {
+                padding: 20px 15px;
+                min-height: 180px;
+            }
         }
 
-        .link-card {
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .link-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .link-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            color: #333333;
-        }
-
-        .link-card p {
-            margin-bottom: 15px;
-            color: #666666;
-        }
-
-        .link-card a {
-            color: #1a0dab;
-            text-decoration: none;
-            font-size: 1em;
-        }
-
-        .link-card a:hover {
-            text-decoration: underline;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 2px 5px;
-            background-color: #f1f3f4;
-            border-radius: 3px;
-            color: #555555;
-            font-size: 0.8em;
-            margin-top: 5px;
-        }
-
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #666666;
-        }
-
-        .footer a {
-            color: #1a0dab;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .visit-counter {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #666666;
-        }
-
-        .visit-counter i {
-            margin-right: 5px;
-            color: #1a0dab;
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1><i class="fas fa-rocket"></i> 3D坦克导航</h1>
+        <h1><i class="fas fa-rocket"></i> 3D坦克网址导航</h1>
         <p>一站式访问3D坦克相关资源库</p>
     </div>
     
@@ -265,8 +214,7 @@
             <h3><i class="fas fa-book"></i> Wiki</h3>
             <p class="desc">全面了解游戏机制、装备、地图和战术策略</p>
             <div class="url">
-                <i class="fas fa-link"></i>
-                <a href="链接9" target="_blank">链接9</a>
+                <a href="链接9" target="_blank"><i class="fas fa-link"></i> 链接9</a>
             </div>
         </div>
         
@@ -275,8 +223,7 @@
             <h3><i class="fas fa-video"></i> 周报视频</h3>
             <p class="desc">每周精选游戏视频，了解最新动态和精彩瞬间</p>
             <div class="url">
-                <i class="fas fa-link"></i>
-                <a href="https://space.bilibili.com/1670766752/lists/245461?type=series" target="_blank">bilibili.com/1670766752 周报视频</a>
+                <a href="https://space.bilibili.com/1670766752/lists/245461?type=series" target="_blank"><i class="fas fa-link"></i> B站周报视频</a>
             </div>
             <span class="tag">Bilibili</span>
         </div>
@@ -286,8 +233,7 @@
             <h3><i class="fas fa-globe"></i> 官网</h3>
             <p class="desc">星际坦克官方网站，获取最新游戏资讯和更新</p>
             <div class="url">
-                <i class="fas fa-link"></i>
-                <a href="链接2" target="_blank">链接2</a>
+                <a href="链接2" target="_blank"><i class="fas fa-link"></i> 链接2</a>
             </div>
         </div>
         
@@ -296,8 +242,7 @@
             <h3><i class="fas fa-trophy"></i> 外服星际挑战排行榜</h3>
             <p class="desc">查看外服玩家在星际挑战中的排名表现</p>
             <div class="url">
-                <i class="fas fa-link"></i>
-                <a href="链接3" target="_blank">pages.tankionline.com/challenge-accepted</a>
+                <a href="链接3" target="_blank"><i class="fas fa-link"></i> 外服排行榜</a>
             </div>
             <span class="tag">排行榜</span>
         </div>
@@ -307,8 +252,7 @@
             <h3><i class="fas fa-star"></i> testanki排行榜</h3>
             <p class="desc">由B站大佬testanki制作的玩家排行榜</p>
             <div class="url">
-                <i class="fas fa-link"></i>
-                <a href="链接5" target="_blank">testanki1.github.io/ratings</a>
+                <a href="链接5" target="_blank"><i class="fas fa-link"></i> testanki排行榜</a>
             </div>
             <span class="tag">玩家制作</span>
         </div>
@@ -318,8 +262,7 @@
             <h3><i class="fas fa-keyboard"></i> 外服字母表游戏辅助</h3>
             <p class="desc">testanki制作的外服字母表游戏辅助工具</p>
             <div class="url">
-                <i class="fas fa-link"></i>
-                <a href="链接6" target="_blank">testanki1.github.io/alphabet/</a>
+                <a href="链接6" target="_blank"><i class="fas fa-link"></i> 字母表辅助工具</a>
             </div>
             <span class="tag">工具</span>
         </div>
@@ -329,8 +272,7 @@
             <h3><i class="fas fa-puzzle-piece"></i> 装备改造图片拼接器</h3>
             <p class="desc">testanki制作的装备改造图片拼接工具</p>
             <div class="url">
-                <i class="fas fa-link"></i>
-                <a href="链接7" target="_blank">testanki1.github.io/augments_icon/custom_splicer</a>
+                <a href="链接7" target="_blank"><i class="fas fa-link"></i> 图片拼接器</a>
             </div>
             <span class="tag">实用工具</span>
         </div>
@@ -340,8 +282,7 @@
             <h3><i class="fas fa-box"></i> 多合一客户端</h3>
             <p class="desc">testanki制作的多合一游戏客户端</p>
             <div class="url">
-                <i class="fas fa-link"></i>
-                <a href="链接8" target="_blank">123pan.com/s/cbiA-hjafd</a>
+                <a href="链接8" target="_blank"><i class="fas fa-link"></i> 多合一客户端</a>
             </div>
             <span class="tag">客户端</span>
         </div>
@@ -351,8 +292,7 @@
             <h3><i class="fas fa-history"></i> 怀旧服网址</h3>
             <p class="desc">访问星际坦克怀旧服官方网站</p>
             <div class="url">
-                <i class="fas fa-link"></i>
-                <a href="https://pro-tanki.com/en" target="_blank">https://pro-tanki.com/en</a>
+                <a href="https://pro-tanki.com/en" target="_blank"><i class="fas fa-link"></i> 怀旧服官网</a>
             </div>
             <span class="tag">怀旧版</span>
         </div>
@@ -360,9 +300,7 @@
     
     <div class="footer">
         <p>3D坦克网址导航 - 为游戏玩家提供便捷的资源访问</p>
-        <div class="copyright">
-            <a href="#"><i class="fas fa-user"></i>返回顶部</a>
-        </div>
+        <a href="#"><i class="fas fa-arrow-up"></i>返回顶部</a>
     </div>
     
     <!-- 访问计数器 -->
@@ -372,19 +310,6 @@
     </div>
     
     <script>
-        // 卡片悬停效果
-        // document.querySelectorAll('.link-card').forEach(card => {
-        //     card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-10px)');
-        //     card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0)');
-        // });
-
-        // 随机阴影效果
-        // setInterval(() => {
-        //     document.querySelectorAll('.link-card').forEach(card => {
-        //         card.style.boxShadow = `0 15px 35px hsla(${Math.random() * 360}, 100%, 50%, 0.15)`;
-        //     });
-        // }, 5000);
-
         // 访问统计（CountAPI + localStorage 降级）
         document.addEventListener('DOMContentLoaded', function() {
             const counterElement = document.getElementById('visitCount');
